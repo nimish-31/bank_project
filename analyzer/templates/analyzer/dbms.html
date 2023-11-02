@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'analyzer/dbms.css' %}">
+    <title>File Upload</title>
+</head>
+<body>
+    <h1 class="title">BANK STATEMENT ANALYZER</h1>
+    <div class="container">
+        <div class="content">
+            <h2 class="here">Upload File here</h2>
+            <form class="form" method="post" action="{% url 'upload_statement' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="statement_file" id="fileupload" accept=".xls">
+                <button id="upload" type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static 'analyzer/upload.js' %}"></script>
+</body>
+</html>

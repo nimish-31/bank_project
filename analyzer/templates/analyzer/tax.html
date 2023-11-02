@@ -1,0 +1,69 @@
+<!-- query_transactions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'analyzer/query_styles.css' %}">
+
+    <title>Tax Calculator</title>
+</head>
+<body>
+    <h1 class="title">BANK STATEMENT ANALYZER</h1>
+    <h1 class="center">Tax slabs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Income </th>
+                <th>Slab</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>upto 1,00,00</td>
+                <td>No tax</td>
+            </tr>
+            <tr>
+                <td>upto 3,00,00</td>
+                <td>10 percent</td>
+            </tr>
+            <tr>
+                <td>upto 5,00,00</td>
+                <td>20 percent</td>
+            </tr>
+            <tr>
+                <td>above 5,00,00</td>
+                <td>30 percent</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 class="center">Payable Tax</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>upto 1,00,00</td>
+                <td>{{tax0|floatformat:2}}</td>
+            </tr>
+            <tr>
+                <td>upto 3,00,00</td>
+                <td>{{tax1|floatformat:2}}</td>
+            </tr>
+            <tr>
+                <td>upto 5,00,00</td>
+                <td>{{tax2|floatformat:2}}</td>
+            </tr>
+            <tr>
+                <td>above 5,00,00</td>
+                <td>{{tax3|floatformat:2}}</td>
+            </tr>
+            <tr>
+                <th>Total Tax:</th>
+                <th>{{total_tax|floatformat:2}}</th>
+            </tr>
+        </tbody>
+        </tbody>
+    </table>
+    <button class="button"><a href='http://127.0.0.1:8000/query_transactions/'>Back</a></button>
+</body>
+</html>

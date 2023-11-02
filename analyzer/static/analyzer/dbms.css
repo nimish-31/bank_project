@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Make sure elements stack vertically */
+}
+
+body {
+    background-color: rgb(222, 253, 255);
+    font-family: 'Times New Roman', Times, serif;
+    flex-grow: 1; /* Allow body to grow and take up remaining vertical space */
+}
+.here{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.title {
+    color: white;
+    font-size: 80px;
+    margin: 20px 0 10px;
+    text-align: center;
+    padding: 20px; /* Add some padding for better visual separation */
+    background-color: #0C356A; /* Background color for the title */
+    border-bottom: 2px solid #fff; /* Add a white border below the title */
+}
+
+.container {
+    color: white;
+    background-color: #0C356A;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center the container horizontally */
+}
+
+.content {
+    margin-top: 10px;
+}
+
+#fileupload {
+    margin-bottom: 10px;
+}
+
+#upload {
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#upload:hover {
+    background-color: #45a049;
+}

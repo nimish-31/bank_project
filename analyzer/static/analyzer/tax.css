@@ -1,0 +1,133 @@
+/* query_styles.css */
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.title {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    padding: 5px; /* Add some padding for better visual separation */
+    background-color: #0C356A; /* Background color for the title */
+    border-bottom: 2px solid #fff; /* Add a white border below the title */
+}
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: rgb(222, 253, 255);
+    font-family: 'Times New Roman', Times, serif;
+    flex-grow: 1;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #A0E9FF;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0C356A;
+    color: white;
+}
+
+/* tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+tr:hover {
+    background-color: #89CFF3;
+}
+
+.here{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 80px;
+    margin: 20px 0 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #0C356A;
+    border-bottom: 2px solid #fff;
+}
+
+.container {
+    color: white;
+    background-color: #0C356A;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+#fileupload {
+    margin-bottom: 10px;
+}
+
+#upload {
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#upload:hover {
+    background-color: #45a049;
+}
+#upi{
+    background-color: #89CFF3 ;
+}
+#insights{
+    font-size: 25px;
+}
+.center{
+    text-align: center;
+    padding: 15px;
+    font-size: 38px;
+}
+.button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underlines from links */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 10px 2px; /* Add some margin */
+    cursor: pointer; /* Change cursor to a hand when hovering */
+}

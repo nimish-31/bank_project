@@ -1,0 +1,78 @@
+<!-- query_transactions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'analyzer/query_styles.css' %}">
+
+    <title>Query Transactions</title>
+</head>
+<body>
+    <h1 class="title">BANK STATEMENT ANALYZER</h1>
+    <h1 class="center">Top Deposits</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Narration</th>
+                {% comment %} <th>Withdrawal Amount</th> {% endcomment %}
+                <th>Deposit Amount</th>
+                {% comment %} <th>Balance</th> {% endcomment %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in top_deposits %}
+            <tr>
+                <td>{{ transaction.date_of_narration }}</td>
+                <td>{{ transaction.narration }}</td>
+                {% comment %} <td>{{ transaction.widthdrawl }}</td> {% endcomment %}
+                <td>{{ transaction.deposit }}</td>  
+                {% comment %} <td>{{ transaction.balance }}</td> {% endcomment %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1 class="center">Top Withdrawals</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Narration</th>
+                <th>Withdrawal Amount</th>
+                {% comment %} <th>Deposit Amount</th> {% endcomment %}
+                {% comment %} <th>Balance</th> {% endcomment %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in top_withdrawls %}
+            <tr>
+                <td>{{ transaction.date_of_narration }}</td>
+                <td>{{ transaction.narration }}</td>
+                <td>{{ transaction.widthdrawl }}</td>
+                {% comment %} <td>{{ transaction.deposit }}</td> {% endcomment %}
+                {% comment %} <td>{{ transaction.balance }}</td> {% endcomment %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1 class="center">Some Insights</h1>
+    <table id="insights">
+        <tr>
+            <td>Number of UPI transactions</td>
+            <td>{{upi}}</td>
+        </tr>
+        <tr>
+            <td>Dividend recieved from Share holdings</td>
+            <td>Rs.{{ dividend.deposit|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td>Income</td>
+            <td>Rs.{{ income.total_deposits|floatformat:2 }}</td>
+        </tr>
+    </table>
+    <button class="button"><a href='http://127.0.0.1:8000/tax/'>Caluclate Tax</a></button>
+
+</body>
+</html>
